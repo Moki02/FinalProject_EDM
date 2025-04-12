@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Inventory Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <header>
+    <h1>Pharmacy Inventory System</h1>
+    <p>Interactive Dashboard & Reports</p>
+  </header>
+
+  <!-- Navigation Dropdowns -->
+  <div class="dropdown-container">
+    <!-- Dropdown 1: Medicine Analytics -->
+    <div class="dropdown">
+      <button class="dropbtn" onclick="showSection('medicine-dashboard')">Medicine Analytics ▼</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="showSection('stock-report')">Stock Report</a>
+        <a href="#" onclick="showSection('expired-report')">Expired Medicines</a>
+        <a href="#" onclick="showSection('profit-report')">Profit Analysis</a>
+      </div>
+    </div>
+
+    <!-- Dropdown 2: Sales & Prescriptions -->
+    <div class="dropdown">
+      <button class="dropbtn" onclick="showSection('sales-dashboard')">Sales & Prescriptions ▼</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="showSection('monthly-sales')">Monthly Sales</a>
+        <a href="#" onclick="showSection('doctor-prescriptions')">Doctor Prescriptions</a>
+        <a href="#" onclick="showSection('patient-history')">Patient History</a>
+      </div>
+    </div>
+
+    <!-- Dropdown 3: Supplier & Purchasing -->
+    <div class="dropdown">
+      <button class="dropbtn" onclick="showSection('supplier-dashboard')">Supplier & Purchasing ▼</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="showSection('top-suppliers')">Top Suppliers</a>
+        <a href="#" onclick="showSection('purchase-history')">Purchase History</a>
+        <a href="#" onclick="showSection('supplier-performance')">Critical Stock alert</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.MetabaseRoot = "http://localhost:3000"; // Explicitly set root
+  </script>
+  <script src="http://localhost:3000/app/dist/entry.js"></script>
+  
+  <!-- Dashboard/Report Sections -->
+  <main>
+    <!-- Medicine Analytics -->
+    <section id="medicine-dashboard" class="dashboard-section">
+      <h2>📊 Medicine Analytics Dashboard</h2>
+      <iframe
+      src="http://localhost:3000/public/dashboard/0d95b83b-20ae-43ab-9152-bab3acef5d4e"
+      frameborder="0"
+      width="100%"
+      height="900"
+      allowtransparency
+  ></iframe>
+    </section>
+
+    <section id="stock-report" class="report-section">
+      <h2>⚠️ Low Stock Alert Report</h2>
+      <iframe
+        src="http://localhost:3000/public/question/d77868f7-6c9f-4577-a308-0973b4f4bd59"
+        frameborder="0"
+        width="100%"
+        height="500">
+      </iframe>
+    </section>
+
+    <section id="expired-report" class="report-section">
+      <h2>❌ Expired Medicines Report</h2>
+      <iframe
+        src="http://localhost:3000/public/question/9ed6b998-b20a-4a4e-82db-4a6b7e856b25"
+        frameborder="0"
+        width="100%"
+        height="500">
+      </iframe>
+    </section>
+
+    <section id="profit-report" class="report-section">
+      <h2>💰 Profit Analysis Report</h2>
+      <iframe
+        src="http://localhost:3000/public/question/373e7764-e212-453d-acb0-7d4500e7df9b"
+        frameborder="0"
+        width="100%"
+        height="500">
+      </iframe>
+    </section>
+
+    <!-- Sales & Prescriptions (Sections 5-8) -->
+    <section id="sales-dashboard" class="dashboard-section">
+      <h2>📈 Sales & Prescriptions Dashboard</h2>
+      <iframe
+        src="http://localhost:3000/public/dashboard/830f537d-c467-4b78-ad2a-4881d3b21a3d"
+        frameborder="0"
+        width="100%"
+        height="900">
+      </iframe>
+    </section>
+
+  <section id="monthly-sales" class="report-section">
+    <h2> Monthly Sales</h2>
+    <iframe
+      src="http://localhost:3000/public/question/231bcf5a-0416-474a-ad6e-ac9835e308c8"
+      frameborder="0"
+      width="100%"
+      height="500">
+    </iframe>
+  </section>
+
+  <section id="doctor-prescriptions" class="report-section">
+    <h2> Doctor Prescriptions</h2>
+    <iframe
+      src="http://localhost:3000/public/question/d9813619-4da8-4685-8963-790e8b48aea8"
+      frameborder="0"
+      width="100%"
+      height="500">
+    </iframe>
+  </section>
+
+  <section id="patient-history" class="report-section">
+    <h2>Patient History</h2>
+    <iframe
+      src="http://localhost:3000/public/question/c3613463-b1c1-4dd6-bfcd-01dfa1882210"
+      frameborder="0"
+      width="100%"
+      height="500">
+    </iframe>
+  </section>
+
+    <!-- Supplier & Purchasing (Sections 9-12) -->
+    <section id="supplier-dashboard" class="dashboard-section">
+      <h2>🏭 Supplier & Purchasing Dashboard</h2>
+      <iframe
+        src="http://localhost:3000/public/dashboard/03de3c75-a3d8-440a-be16-f3502d960d49"
+        frameborder="0"
+        width="100%"
+        height="900">
+      </iframe>
+    </section>
+
+    <section id="top-suppliers" class="report-section">
+      <h2>Top Suppliers</h2>
+      <iframe
+        src="http://localhost:3000/public/question/146347e1-3daa-4fce-bb98-f1868575808d"
+        frameborder="0"
+        width="100%"
+        height="500">
+      </iframe>
+    </section>
+  
+    <section id="purchase-history" class="report-section">
+      <h2>Purchase History</h2>
+      <iframe
+        src="http://localhost:3000/public/question/c3613463-b1c1-4dd6-bfcd-01dfa1882210"
+        frameborder="0"
+        width="100%"
+        height="500">
+      </iframe>
+    </section>
+  
+    <section id="supplier-performance" class="report-section">
+      <h2>Critical Stock alert</h2>
+      <iframe
+        src="http://localhost:3000/public/question/db642f69-4f12-4860-a007-90fae8622e71"
+        frameborder="0"
+        width="100%"
+        height="500">
+      </iframe>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Pharmacy Inventory System &copy; 2024</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
